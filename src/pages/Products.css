@@ -1,0 +1,22 @@
+.sdsimg2{
+    width: 100%;
+    padding-top: 70%;
+}
+
+.prodicon{
+    height: 50px;
+    margin: 10px;
+}
+
+.prodcta{
+    background-image: url('/assets/images/building.jpg');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    height: 500px;
+    padding-top: 200px;
+    margin-top: 80px;
+    color: #ffffff;
+}

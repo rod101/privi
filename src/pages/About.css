@@ -1,0 +1,21 @@
+.welcome{
+    height: 500px;
+    display: table-cell;
+  vertical-align: middle ;
+}
+
+.line {
+    height: 3px;
+    width: 50px;
+    background-color: #2D80F3;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.aboutimg{
+    width: 100%;
+    margin-top: 8px;
+}
+.topspacing{
+margin-top: 100px;
+}
