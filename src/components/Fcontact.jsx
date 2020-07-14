@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "./Fcontact.css";
+import axios from 'axios';
+
+const API_PATH = 'http://privi.co.za/services/sendmail.php';
 
 export class Fcontact extends Component {
   constructor(props) {
@@ -35,6 +38,19 @@ export class Fcontact extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("sending form", this.state);
+    axios({
+      method: 'post',
+      url: `${API_PATH}`,
+      headers: { 'content-type': 'application/json' },
+      data: this.state
+      
+    })
+      .then(result => {
+        this.setState({
+          mailSent: result.data.sent,
+        })
+      })
+      .catch(error => this.setState({ error: error.message }));
   }
 
   render() {
@@ -53,7 +69,7 @@ export class Fcontact extends Component {
           <Col>
             <h1>Get In Touch</h1>
             <div className="line"></div>
-            <Form>
+            <Form action="#">
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Control
                   as="select"
@@ -153,12 +169,12 @@ export class Fcontact extends Component {
               <Button variant="primary" size="lg" onClick={this.handleSubmit}>
                 Submit
               </Button>
-            </Form>
-          </Col>
-          <div>
   {this.state.mailSent &&
     <div>Thank you for contcting us.</div>
   }
+            </Form>
+          </Col>
+          <div>
 </div>
         </Row>
       </div>
