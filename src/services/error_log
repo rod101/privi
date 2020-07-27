@@ -1,0 +1,8 @@
+[14-Jul-2020 11:18:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function echojson_encode() in /home/privifit/public_html/services/sendmail.php:52
+Stack trace:
+#0 {main}
+  thrown in /home/privifit/public_html/services/sendmail.php on line 52
+[14-Jul-2020 11:33:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function echojson_encode() in /home/privifit/public_html/services/sendmail.php:52
+Stack trace:
+#0 {main}
+  thrown in /home/privifit/public_html/services/sendmail.php on line 52

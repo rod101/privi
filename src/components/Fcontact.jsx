@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "./Fcontact.css";
-import axios from 'axios';
+import axios from "axios";
 
-const API_PATH = 'http://privi.co.za/services/sendmail.php';
+const API_PATH = "http://privi.co.za/services/sendmail.php";
 
 export class Fcontact extends Component {
   constructor(props) {
@@ -19,12 +19,19 @@ export class Fcontact extends Component {
       contact: "How did you hear about us?",
       comment: "",
       mailSent: false,
-      error: null
+      error: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  clearForms = () => {
+    this.setState({
+      email: "",
+      company: "",
+    });
+  };
 
   handleChange = (e) => {
     const isCheckbox = e.target.type === "checkbox";
@@ -39,18 +46,23 @@ export class Fcontact extends Component {
     e.preventDefault();
     console.log("sending form", this.state);
     axios({
-      method: 'post',
+      method: "post",
       url: `${API_PATH}`,
-      headers: { 'content-type': 'application/json' },
-      data: this.state
-      
+      headers: { "content-type": "application/json" },
+      data: this.state,
     })
-      .then(result => {
+      .then((result) => {
         this.setState({
           mailSent: result.data.sent,
-        })
+        });
       })
-      .catch(error => this.setState({ error: error.message }));
+      .catch((error) => this.setState({ error: error.message }));
+    console.log(
+      "that is the messages am sending that i cant see",
+      this.props.mailSent
+    );
+    alert("here is a message", this.mailSent);
+    this.clearForms();
   }
 
   render() {
@@ -169,13 +181,11 @@ export class Fcontact extends Component {
               <Button variant="primary" size="lg" onClick={this.handleSubmit}>
                 Submit
               </Button>
-  {this.state.mailSent &&
-    <div>Thank you for contcting us.</div>
-  }
+
+              {this.state.mailSent && <div>Thank you for contcting us.</div>}
             </Form>
           </Col>
-          <div>
-</div>
+          <div></div>
         </Row>
       </div>
     );

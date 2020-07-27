@@ -8,8 +8,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Booking from './pages/Booking';
 import Products from './pages/Products';
-// import Services from './pages/Services';
+import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Application from './pages/Sdsapplicationform';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/product" component={Products} />
-        {/* <Route path="/service" component={Services} /> */}
+          <Route path="/service" component={Services} />
         <Route path="/contact" component={Contact} />
         <Route path="/booking" component={Booking} />
+        <Route path="/Application" component={Application} />
         <Footer />
       </div>
     </Router>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import Hero from "../components/Hero";
 
@@ -111,9 +112,11 @@ const Home = () => {
                 management, Facilitation, Assessment, Moderation, ETQA Quality
                 Assurance and Monitoring and Evaluation
               </p>
+              <Link to="/product">
               <Button variant="light" size="lg">
                 See it for Yourself
               </Button>
+              </Link>
             </Col>
             <Col>
               <img className="sdsimg" src="assets/images/sds.png" alt="" />
