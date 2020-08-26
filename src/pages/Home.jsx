@@ -128,10 +128,12 @@ const Home = () => {
         <Container>
         <span>
           <h3>
-            We Build Relationships, Ready for the LMS You Need?
+            We Build Relationships, Ready for the SDS You Need?
+            <Link to="/product">
             <Button variant="primary" size="lg">
               See it for Yourself
             </Button>
+            </Link>
           </h3>
         </span>
         </Container>

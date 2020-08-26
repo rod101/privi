@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button, Alert } from "react-bootstrap";
 import "./Fcontact.css";
 import axios from "axios";
 
@@ -27,16 +27,43 @@ export class Fcontact extends Component {
   }
 
   clearForms = () => {
+
+    this.refs.project.value="Start a Project";
+      this.refs.email.value="";
+      this.refs.company.value="";
+      this.refs.fname.value="";
+      this.refs.phone.value="";
+      this.refs.location.value="";
+      this.refs.contact.value="How did you hear about us?"
+      this.refs.comment.value="";
+
     this.setState({
-      email: "",
-      company: "",
+      email: '',
+      company: '',
+      // mailSent: false,
+      
     });
+    console.log("clear form fun!!" );
   };
+
+
+//   resetFormState = () => {
+//     this.setState({
+//        formState: {
+//         email: "",
+//         company: "",
+//           email: "",
+//           mode: "submit",
+//           id: ""
+//        }
+//     });
+//  };
 
   handleChange = (e) => {
     const isCheckbox = e.target.type === "checkbox";
     this.setState({
       [e.target.name]: isCheckbox ? e.target.checked : e.target.value,
+      mailSent: false
     });
 
     console.log("is checked " + e.target.name);
@@ -53,16 +80,20 @@ export class Fcontact extends Component {
     })
       .then((result) => {
         this.setState({
-          mailSent: result.data.sent,
+          // mailSent: result.data.sent,
+          mailSent: true
         });
+        this.clearForms();
+        console.log("clear my form" );
       })
       .catch((error) => this.setState({ error: error.message }));
     console.log(
       "that is the messages am sending that i cant see",
       this.props.mailSent
     );
-    alert("here is a message", this.mailSent);
-    this.clearForms();
+    // alert("here is a message", this.mailSent);
+    //    this.clearForms();
+  
   }
 
   render() {
@@ -84,6 +115,7 @@ export class Fcontact extends Component {
             <Form action="#">
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Control
+                ref="project"
                   as="select"
                   size="lg"
                   name="project"
@@ -100,6 +132,7 @@ export class Fcontact extends Component {
                 <Form.Row>
                   <Col>
                     <Form.Control
+                    ref="email"
                       placeholder="Email"
                       size="lg"
                       name="email"
@@ -108,6 +141,7 @@ export class Fcontact extends Component {
                   </Col>
                   <Col>
                     <Form.Control
+                    ref="company"
                       placeholder="Company Name"
                       size="lg"
                       name="company"
@@ -121,6 +155,7 @@ export class Fcontact extends Component {
                 <Form.Row>
                   <Col>
                     <Form.Control
+                    ref="fname"
                       placeholder="Full Name"
                       size="lg"
                       name="fname"
@@ -129,6 +164,7 @@ export class Fcontact extends Component {
                   </Col>
                   <Col>
                     <Form.Control
+                    ref="phone"
                       placeholder="Phone Number"
                       size="lg"
                       name="phone"
@@ -142,6 +178,7 @@ export class Fcontact extends Component {
                 <Form.Row>
                   <Col>
                     <Form.Control
+                    ref="location"
                       placeholder="Location"
                       size="lg"
                       name="location"
@@ -151,7 +188,8 @@ export class Fcontact extends Component {
                   <Col>
                     <Form.Group controlId="exampleForm.ControlSelect1">
                       <Form.Control
-                        placeholder="Location"
+                      ref="contact"
+                        placeholder="contact"
                         as="select"
                         size="lg"
                         name="contact"
@@ -170,6 +208,7 @@ export class Fcontact extends Component {
 
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Control
+                ref="comment"
                   as="textarea"
                   rows="3"
                   size="lg"
@@ -182,7 +221,12 @@ export class Fcontact extends Component {
                 Submit
               </Button>
 
-              {this.state.mailSent && <div>Thank you for contcting us.</div>}
+              {this.state.mailSent && 
+              <div>
+                <Alert variant="success">
+                Thank you for contcting us.
+                </Alert>
+                </div>}
             </Form>
           </Col>
           <div></div>

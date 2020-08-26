@@ -32,7 +32,7 @@ const Footer = () => {
             <b>Physical address:</b>
             <p>22 Countesses Avenue Windsor West Johannesburg</p>
             <b>Telephone Number:</b>
-            <p>+27 62 982 7442</p>
+            <p>+27 73 852 8719</p>
             <p>info@privi.co.za</p>
           </Col>
         </Row>
