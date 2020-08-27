@@ -74,7 +74,7 @@ const Products = () => {
             <div className="prodcta">
                 <p>The SDS is compatible and can be integrated with any learner Management system that may be in place.</p>
                 <h3>SETAs, QCTO, TVET Colleges, Schools and Universities</h3>
-                <Button size="lg">Join Now</Button> <Button size="lg">Demo</Button>
+                <Button size="lg">Watch Demo</Button> <Button size="lg">Book for a Demo</Button>
             </div>
             </Col>
         </Row>

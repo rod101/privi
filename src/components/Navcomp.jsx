@@ -20,6 +20,7 @@ const Navcomp = () => {
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/product">Products</Nav.Link>
               <Nav.Link href="/service">Services</Nav.Link>
+              <Nav.Link href="/booking">Book Demo</Nav.Link>
               <Nav.Link href="/application">SDS Application Form</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
          

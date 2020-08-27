@@ -12,7 +12,7 @@ if ($_POST)
 	// set response code - 200 OK
 
 	http_response_code(200);
-	$to = "rodney@adrodmedia.co.za, info@privi.co.za";
+	$to = "rodney@adrodmedia.co.za, marketing@privi.co.za, technical@privi.co.za";
 	$subject = "From Privi Contact Form";
 	$project = $_POST['project'];
 	$from = $_POST['email'];
