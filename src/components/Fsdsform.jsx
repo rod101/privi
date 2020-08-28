@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 
 export class Fsdsform extends Component {
   render() {
@@ -33,61 +33,400 @@ export class Fsdsform extends Component {
             <Form.Row>
               <Col>
                 <Form.Control
-                  ref="phone"
-                  placeholder="Phone Number"
+                  ref="phyaddress"
+                  placeholder="SDP Physical Address"
                   size="lg"
-                  name="phone"
+                  name="phyaddress"
                   onChange={this.handleChange}
                 />
               </Col>
               <Col>
                 <Form.Control
-                  ref="email"
-                  placeholder="Email"
+                  ref="Coordinates"
+                  placeholder="SDP Coordinates"
                   size="lg"
-                  name="email"
+                  name="Coordinates"
+                  onChange={this.handleChange}
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  ref="sdpperson"
+                  placeholder="SDP Contact Person"
+                  size="lg"
+                  name="sdpperson"
                   onChange={this.handleChange}
                 />
               </Col>
             </Form.Row>
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label as="legend" column sm={6}>
-              <b>Day:</b>
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Check
-                inline
-                type="radio"
-                label="Wednesday"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
+          <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  ref="phyaddress"
+                  placeholder="SDP Telephone Number 1"
+                  size="lg"
+                  name="phyaddress"
+                  onChange={this.handleChange}
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  ref="Coordinates"
+                  placeholder="SDP Telephone Number 2"
+                  size="lg"
+                  name="Coordinates"
+                  onChange={this.handleChange}
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  ref="sdpperson"
+                  placeholder="SDP Email Address"
+                  size="lg"
+                  name="sdpperson"
+                  onChange={this.handleChange}
+                />
+              </Col>
+            </Form.Row>
           </Form.Group>
 
-          <Form.Group>
-            <Form.Label as="legend" column sm={6}>
-              <b>Time:</b>
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Check
-                inline
-                type="radio"
-                label="11:00am"
-                name="formHorizontalRadios2"
-                id="formHorizontalRadios1"
-              />
-              <Form.Check
-                inline
-                type="radio"
-                label="2:00pm"
-                name="formHorizontalRadios2"
-                id="formHorizontalRadios2"
-              />
-            </Col>
+          <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  ref="namesds"
+                  placeholder="SDP Primary SETA"
+                  size="lg"
+                  name="namesds"
+                  onChange={this.handleChange}
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  ref="contact"
+                  placeholder="SDP Primary SETA Accreditation number"
+                  size="lg"
+                  name="contact"
+                  onChange={this.handleChange}
+                />
+              </Col>
+            </Form.Row>
           </Form.Group>
+
+         <p><b>Primary SETA Accredited Programmes</b></p>
+
+         <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+
+
+            <Form.Row>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="saqaid1"
+                  placeholder="SAQA ID Number"
+                  size="lg"
+                  name="saqaid1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="3" >
+                <Form.Control
+                  ref="nqflevel1"
+                  placeholder="NQF Level"
+                  size="lg"
+                  name="nqflevel1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            <Form.Group as={Col} md="6" >
+                <Form.Control
+                  ref="progtitle1"
+                  placeholder="Programme Title"
+                  size="lg"
+                  name="progtitle1"
+                  onChange={this.handleChange}
+                />
+            </Form.Group>
+            </Form.Row>
+<hr/>
+            <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Row>
+              <Col>
+                <Form.Control
+                  ref="namesds"
+                  placeholder="SDP Primary SETA"
+                  size="lg"
+                  name="namesds"
+                  onChange={this.handleChange}
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  ref="contact"
+                  placeholder="SDP Primary SETA Accreditation number"
+                  size="lg"
+                  name="contact"
+                  onChange={this.handleChange}
+                />
+              </Col>
+            </Form.Row>
+          </Form.Group>
+
+         <p><b>Primary SETA Accredited Programmes</b></p>
+
+
+
+          </Form.Group>
+
+
+          
           <Button variant="primary" size="lg" onClick={this.handleSubmit}>
             Submit
           </Button>

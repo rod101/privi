@@ -11,6 +11,7 @@ import Products from './pages/Products';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Application from './pages/Sdsapplicationform';
+import Hwapprove from './pages/Hwapprove';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/booking" component={Booking} />
         <Route path="/Application" component={Application} />
+        <Route path="/hwapprove" component={Hwapprove} />
         <Footer />
       </div>
     </Router>

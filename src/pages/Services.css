@@ -2,3 +2,42 @@
     width: 100%;
     margin-bottom: 100px;
 }
+
+.parallax_home {
+    /* The image used */
+    background-image: url("/assets/images/lady_learning.jpg");
+    
+    /* Set a specific height */
+    min-height: 700px;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.myoverlay{
+    /* background-color: black;
+    opacity: 0.4; 
+    min-height: 700px; */
+    
+  }
+  .parallax_home >img {
+    opacity: 0.1;
+  }
+  
+  .slogan {
+    /* color: #fff; */
+    color: #000000;
+    text-align: center;
+    padding-top: 6%;
+  }
+  
+  .slogan_logo {
+    width: 200px;
+    padding-bottom: 25px;
+  }
+
+  .mycard{
+      color: black;
+  }

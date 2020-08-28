@@ -19,3 +19,27 @@
 .topspacing{
 margin-top: 100px;
 }
+
+.aboutbg1{
+    background-image: url('/assets/images/about_mission.jpg');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    height: 600px;
+    padding-top: 150px;
+    margin-top: 80px;
+    color: #ffffff;
+}
+
+.line2 {
+    height: 3px;
+    width: 50px;
+    background-color: #2D80F3;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Fsdsform from "../components/Fbooking";
+import Fsdsform from "../components/Fsdsform";
 import "./Sdsapplicationform.css";
 
 const Sdsapplicationform = () => {

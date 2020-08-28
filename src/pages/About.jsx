@@ -4,6 +4,7 @@ import "./About.css";
 
 const About = () => {
   return (
+    <div>
     <Container>
       <Row className="topspacing">
         <Col>
@@ -47,38 +48,36 @@ const About = () => {
           />
         </Col>
       </Row>
+      </Container>
 
-      <Row className="topspacing">
-        <Col>
-          <img src="assets/images/learning_anywhere.jpg" alt="" />
-        </Col>
-        <Col>
-        <div className="welcome">
-          <h1>Our Mission</h1>
-          <div className="line"></div>
+
+
+      <Row>
+            <Col>
+            <div className="aboutbg1">
+            <h1>Our Mission</h1>
+          <div className="line2"></div>
           <p>
             To enable effective training, teaching, and learning anywhere by
             anyone in the whole country, regardless of geographical location or
             economic circumstances
           </p>
-          </div>
-        </Col>
-      </Row>
-      <Row className="topspacing">
-        <Col>
-        <div className="welcome">
+
           <h1>Our Vision</h1>
-          <div className="line"></div>
+          <div className="line2"></div>
           <p>
             To continue leading the development of customised training,
             teaching, and learning software and platforms
         </p>
-        </div>
-          </Col>
-        <Col>
-          <img src="assets/images/eyeglasses.jpg" alt="" />
-        </Col>
-      </Row>
+                
+            </div>
+            </Col>
+        </Row>
+
+
+<Container>
+
+
       <Row className="topspacing">
         <Col>
           <img src="assets/images/girl_watching.jpg" alt="" />
@@ -107,6 +106,7 @@ const About = () => {
           </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 
